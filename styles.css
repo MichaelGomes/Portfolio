@@ -202,12 +202,101 @@ body::-webkit-scrollbar {
   transform: scale(1.1);
 }
 
-.featured {
+/* .featured {
   display: flex;
-}
+} */
 
 .star {
   padding-left: 5px;
   font-size: 15px;
   margin-top: -3px;
+}
+
+/* ----------Projects----------*/
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  position: relative;
+}
+
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  height: max-content;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  border: 1px black solid;
+}
+
+.badge {
+  font-size: 10px;
+  margin: 5px 3px 10px 3px;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.icon {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(124, 0, 130, 0.8);
+}
+
+.icon:hover {
+  transform: scale(1.15);
+}
+
+.disabled {
+  cursor: default;
+  background-color: grey;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+hr {
+  margin-top: 15px;
+  opacity: 0.3;
+}
+
+.card-content p {
+  padding: 10px;
+  line-height: 20px;
+}
+
+.card-content b {
+  font-weight: 700;
+}
+
+.card-content a {
+  color: rgb(195, 0, 255);
+  text-decoration: underline;
+}
+
+.technologies {
+  font: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  column-gap: 14px;
+  opacity: 0.8;
 }
