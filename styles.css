@@ -85,6 +85,18 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) translateY(-50%) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%) scale(1);
+  }
+}
+
 /* ----------Header----------*/
 .header {
   display: flex;
@@ -315,4 +327,32 @@ hr {
   display: flex;
   column-gap: 14px;
   opacity: 0.8;
+}
+
+/* ----------Profile Links----------*/
+.links {
+  position: fixed;
+  right: 62px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: fade-left 0.5s 0.8s backwards;
+}
+
+.link-item {
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.link-item:hover {
+  transform: scale(1.15);
+}
+
+.fa-linkedin {
+  color: #0e76a8;
+  transition: all 0.4s;
+  margin-bottom: 20px;
+}
+
+.fa-linkedin:hover {
+  color: white;
 }
