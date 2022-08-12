@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+
+:root {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black;
+  font-family: "Inter", sans-serif;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Remove Scroll Bar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ----------Animations----------*/
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ----------Header----------*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 42px 62px;
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  font-family: "Satisfy", cursive;
+  animation: fade-down 0.5s 0.4s backwards;
+}
+
+/* BUTTON */
+.btn {
+  background-color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.15);
+}
+
+.btn-contact {
+  animation: fade-down 0.5s 0.4s backwards;
+  z-index: 100;
+}
