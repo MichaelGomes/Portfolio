@@ -356,3 +356,22 @@ hr {
 .fa-linkedin:hover {
   color: white;
 }
+
+/* ----------Footer----------*/
+.footer {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px 0 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+.email {
+  font-size: 12px;
+  margin-left: auto;
+}
