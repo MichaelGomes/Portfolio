@@ -31,6 +31,7 @@ body {
   position: relative;
   overflow-x: hidden;
   scrollbar-width: none; /* For Firefox */
+  height: 100vh;
 }
 
 /* Remove Scroll Bar */
@@ -38,11 +39,44 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.color {
+  height: 1000px;
+  width: 1000px;
+  background-image: radial-gradient(
+    closest-side,
+    rgba(195, 0, 255, 0.314),
+    black
+  );
+  position: absolute;
+  left: 15%;
+  z-index: -1;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.purple {
+  color: rgb(151, 0, 197);
+}
+
 /* ----------Animations----------*/
 @keyframes fade-down {
   0% {
     opacity: 0;
     transform: translateY(-30px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
   }
 
   100% {
@@ -86,4 +120,45 @@ body::-webkit-scrollbar {
 .btn-contact {
   animation: fade-down 0.5s 0.4s backwards;
   z-index: 100;
+}
+
+/* ----------Main----------*/
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 90px;
+  padding: 0 25px;
+}
+/* ----------Intro----------*/
+.intro {
+  padding-top: 125px;
+  animation: fade-up 0.5s;
+}
+.first-heading {
+  font-size: 48px;
+  font-weight: 600;
+  opacity: 0.94;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji {
+  font-size: 35px;
+  margin-top: -8px;
+  margin-left: 3px;
+}
+
+.text {
+  font-size: 40px;
+  opacity: 0.9;
+  font-weight: 300;
+  margin-top: 11px;
+  line-height: 1.1;
+}
+
+.text-second {
+  display: block;
 }
